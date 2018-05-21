@@ -13,7 +13,7 @@
         "smarty/smarty": "^3.1"
     },
     "support": {
-        "issues": "https://github.com/zoujingli/think-smarty/issues"
+        "issues": "https://github.com/yaofulai/think-smarty/issues"
     },
     "autoload": {
         "classmap": {
