@@ -1,10 +1,10 @@
 <?php
 
 /**
- * ThinkPHP 5.x Smarty 驱动器
+ * ThinkPHP 5.1.x Smarty 驱动器
  * 
- * @author Anyon <zoujingli@qq.com>
- * @date 2016/10/20 09:57
+ * @author Anyon <115376835@qq.com>
+ * @date 2018/05/20 09:57
  */
 
 namespace think\view\driver;
@@ -83,6 +83,8 @@ class Smarty {
         $default['__LIB__'] = $default['__ROOT__'] . '/static/plugs';
         $default['__STATIC__'] = $default['__ROOT__'] . '/static';
         $default['__UPLOAD__'] = $default['__ROOT__'] . '/static/upload';
+		
+		$default = array_merge($default, $this->config['view_replace_str']);
         // 赋值模板变量
         !empty($template) && $this->template->assign($data);
         echo str_replace(array_keys($default), array_values($default), $this->template->fetch($template));
